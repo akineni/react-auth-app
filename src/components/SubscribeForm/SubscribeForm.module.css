@@ -1,0 +1,29 @@
+.subscribe-form {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.subscribe-form input {
+    width: 60%;
+    padding: 12px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.subscribe-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #ff6347;
+}
+
+@media (max-width: 768px) {
+    .subscribe-form input {
+        width: 80%;
+    }
+}

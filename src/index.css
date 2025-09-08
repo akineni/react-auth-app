@@ -1,0 +1,7 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.bg-orange { background-color: #ff7f50; }
+
+.nav-link.btn:hover {background-color: #ff6347; }

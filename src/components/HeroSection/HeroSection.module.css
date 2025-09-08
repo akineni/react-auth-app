@@ -1,0 +1,42 @@
+.hero-section {
+    background: linear-gradient(to right, #6c757d, #343a40);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Base style */
+.heroTitle {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Home variant */
+.heroTitleHome {
+    font-size: 3.5rem;
+}
+
+/* 404 variant */
+.heroTitle404 {
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

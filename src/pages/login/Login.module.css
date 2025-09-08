@@ -1,0 +1,137 @@
+.login-section {
+    background: linear-gradient(to right, #6c757d, #343a40);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.login-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.login-form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form-container input {
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.login-form-container button {
+    width: 100%;
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.login-form-container button:hover {
+    background-color: #ff6347;
+}
+
+.btn-google {
+    background-color: #db4437;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-google img {
+    margin-right: 10px;
+}
+
+.btn-google:hover {
+    background-color: #c33b2f;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #343a40;
+}
+
+.login-footer a {
+    color: #ff7f50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+    color: #ff6347;
+}
+
+/* Separator Style */
+.separator {
+    margin: 20px 0;
+    font-weight: 500;
+    color: #6c757d;
+    text-align: center;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background-color: #ccc;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-icons a {
+    color: #ff7f50;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #ff6347;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .login-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .login-form-container {
+        padding: 30px;
+    }
+}

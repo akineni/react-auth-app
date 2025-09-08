@@ -1,0 +1,35 @@
+.cta-btn {
+    background: linear-gradient(to right, #ff7f50, #ff6347);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: #ff6347;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #ff7f50;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff6347;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .cta-btn {
+        padding: 12px 20px;
+    }
+}

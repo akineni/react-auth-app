@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #343a40;
+    color: #fff;
+    padding-top: 20px;
+    transition: all 0.3s;
+    z-index: 1050;
+}
+
+.sidebar.collapsed {
+    margin-left: -250px;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    /* transition: background 0.3s; */
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #495057;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* Top navbar */
+.top-navbar {
+    background: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #343a40;
+    border: none;
+    background: none;
+}
+
+.stat-card {
+    border-radius: 12px;
+    padding: 25px;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card i {
+    font-size: 2rem;
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(45deg, #56ab2f, #a8e063);
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+}
+
+.recent-orders {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile overlay */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+
+    .sidebar.show {
+        margin-left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
