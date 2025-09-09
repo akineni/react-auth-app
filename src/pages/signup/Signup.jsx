@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signupSchema } from '../../schemas/signup.schema';
 import { toast } from 'react-toastify';
-import { signUpNewUser } from '../../services/authService';
+import { signUpNewUser, signInWithOAuth } from '../../services/authService';
 import { APP_NAME } from '../../config/appConfig';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
@@ -46,7 +46,7 @@ export default function Signup() {
                     <h1 className="mb-4">Join {APP_NAME}</h1>
                     <div className={styles['signup-form-container']}>
                         {/* Mock Google Sign-Up Button */}
-                        <button className={styles['btn-google']}>
+                        <button className={styles['btn-google']} onClick={signInWithOAuth}>
                             <i className="fa-brands fa-google me-2"></i> Sign up with Google
                         </button>
 

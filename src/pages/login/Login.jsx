@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { loginSchema } from '../../schemas/login.schema';
 import { toast } from 'react-toastify';
 import Footer from '../../components/Footer/Footer';
-import { signInWithEmail } from '../../services/authService';
+import { signInWithEmail, signInWithOAuth } from '../../services/authService';
 import { APP_NAME } from '../../config/appConfig';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
@@ -46,7 +46,7 @@ export default function Login() {
                     <h1 className="mb-4">Welcome Back to {APP_NAME}</h1>
                     <div className={ styles['login-form-container'] }>
                         {/* Mock Google Sign-In Button */}
-                        <button className={ styles['btn-google'] }>
+                        <button className={ styles['btn-google'] } onClick={signInWithOAuth}>
                             <i className="fa-brands fa-google me-2"></i> Sign in with Google
                         </button>
 
