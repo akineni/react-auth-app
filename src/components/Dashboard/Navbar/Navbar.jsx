@@ -1,6 +1,12 @@
+import { useAuth } from '@context/AuthProvider';
 import styles from './Navbar.module.css';
 
 export default function Navbar({ handleToggle }) {
+    const { session } = useAuth();
+    const avatarUrl = session?.user?.user_metadata?.avatar_url;
+    const fallbackAvatar = "https://www.gravatar.com/avatar/?d=mp"; // https://i.pravatar.cc/40
+    const safeAvatarUrl = avatarUrl && avatarUrl.trim() !== "" ? avatarUrl : fallbackAvatar;
+
     return (
         <>
             {/* Top Navbar */}
@@ -15,7 +21,13 @@ export default function Navbar({ handleToggle }) {
                 <h4 className="mb-0">Dashboard</h4>
                 <div>
                     <i className="fas fa-bell me-3"></i>
-                    <img src="https://i.pravatar.cc/40" className="rounded-circle" alt="User" />
+                    <img
+                        src={safeAvatarUrl}
+                        className="rounded-circle"
+                        alt="User"
+                        width={40}
+                        height={40}
+                    />
                 </div>
             </div>
         </>

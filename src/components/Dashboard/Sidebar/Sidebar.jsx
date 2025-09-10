@@ -26,10 +26,8 @@ export default function Sidebar({
                     </button>
                 </div>
                 <a href="#" className="active"><i className="fas fa-tachometer-alt me-2"></i> Dashboard</a>
-                <a href="#"><i className="fas fa-box me-2"></i> Products</a>
-                <a href="#"><i className="fas fa-shopping-cart me-2"></i> Orders</a>
-                <a href="#"><i className="fas fa-users me-2"></i> Customers</a>
-                <a href="#"><i className="fas fa-cog me-2"></i> Settings</a>
+                <a href="#"><i className="fas fa-box me-2"></i> Menu 2</a>
+                <a href="#"><i className="fas fa-shopping-cart me-2"></i> Menu 3</a>
                 <a href="" onClick={(e) => { e.preventDefault(); handleLogout(); }}>
                     <i className="fas fa-sign-out-alt me-2"></i> Logout
                 </a>
