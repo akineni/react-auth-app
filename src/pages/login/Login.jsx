@@ -73,16 +73,7 @@ export default function Login() {
             </section>
 
             {/* <Footer /> */}
-            <footer className={ styles.footer }>
-                <div className="container">
-                    <p>&copy; 2024 {APP_NAME}. All rights reserved.</p>
-                    <div className={ styles['social-icons']}>
-                        <a href="#"><i className="fab fa-facebook"></i></a>
-                        <a href="#"><i className="fab fa-instagram"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </footer>
+            <Footer className={ styles['social-icons'] } />
         </>
     );
 }

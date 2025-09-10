@@ -114,14 +114,14 @@
     margin: 0;
 }
 
-.footer .social-icons a {
+.social-icons a {
     color: #ff7f50;
     margin: 0 10px;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
-.footer .social-icons a:hover {
+.social-icons a:hover {
     color: #ff6347;
 }
 
