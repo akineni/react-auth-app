@@ -26,12 +26,9 @@ export default function Login() {
     const onSubmit = async (formData) => {
         try {
             const { user, session } = await signInWithEmail(formData);
-
-            // console.log("Login successful:", user);
+            
             toast.success("Login successful!");
-
             navigate("/dashboard");
-
         } catch (err) {
             console.error("Error during login:", err);
             toast.error(err.message || "Failed to log in. Please try again.");
