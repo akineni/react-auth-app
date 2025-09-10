@@ -5,7 +5,7 @@ import Footer from '@components/Footer/Footer';
 import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function NotFound() {
-    useDocumentTitle ("Login");
+    useDocumentTitle ("Not Found");
 
     return (
         <>
