@@ -1,4 +1,4 @@
-import { useAuth } from '../../context/AuthProvider';
+import { useAuth } from '@context/AuthProvider';
 import styles from './Loader.module.css';
 
 export default function Loader() {

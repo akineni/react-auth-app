@@ -2,11 +2,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './Signup.module.css';
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
-import { signupSchema } from '../../schemas/signup.schema';
+import { signupSchema } from '@schemas/signup.schema';
 import { toast } from 'react-toastify';
-import { signUpNewUser, signInWithOAuth } from '../../services/authService';
-import { APP_NAME } from '../../config/appConfig';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import { signUpNewUser, signInWithOAuth } from '@services/authService';
+import { APP_NAME } from '@config/appConfig';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function Signup() {
     useDocumentTitle ("Signup");

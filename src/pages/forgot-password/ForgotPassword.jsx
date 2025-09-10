@@ -2,10 +2,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './ForgotPassword.module.css';
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
-import { forgotPasswordSchema } from '../../schemas/forgot-password.schema';
-import { resetPassword } from '../../services/authService';
+import { forgotPasswordSchema } from '@schemas/forgot-password.schema';
+import { resetPassword } from '@services/authService';
 import { toast } from 'react-toastify';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function ForgotPassword() {
     useDocumentTitle ("Forgot Password");

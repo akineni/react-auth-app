@@ -1,8 +1,8 @@
 import styles from './404.module.css';
-import Navbar from '../../components/Navbar/Navbar';
-import HeroSection from '../../components/HeroSection/HeroSection';
-import Footer from '../../components/Footer/Footer';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import Navbar from '@components/Navbar/Navbar';
+import HeroSection from '@components/HeroSection/HeroSection';
+import Footer from '@components/Footer/Footer';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function NotFound() {
     useDocumentTitle ("Login");

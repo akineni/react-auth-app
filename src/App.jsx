@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import ForgotPassword from './pages/forgot-password/ForgotPassword'
-import Login from './pages/login/Login'
-import ResetPassword from './pages/reset-password/ResetPassword'
-import Signup from './pages/signup/Signup'
-import Home from './pages/home/Home'
+import ForgotPassword from '@pages/forgot-password/ForgotPassword'
+import Login from '@pages/login/Login'
+import ResetPassword from '@pages/reset-password/ResetPassword'
+import Signup from '@pages/signup/Signup'
+import Home from '@pages/home/Home'
 import { ToastContainer } from 'react-toastify';
-import NotFound from './pages/404/404'
-import Dashboard from './pages/dashboard/Dashboard'
-import PublicLayout from './components/PublicLayout'
-import ProtectedLayout from './components/ProtectedLayout'
+import NotFound from '@pages/404/404'
+import Dashboard from '@pages/dashboard/Dashboard'
+import PublicLayout from '@components/PublicLayout'
+import ProtectedLayout from '@components/ProtectedLayout'
 
 function App() {
   return (

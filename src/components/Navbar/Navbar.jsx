@@ -1,4 +1,4 @@
-import { APP_NAME } from '../../config/appConfig';
+import { APP_NAME } from '@config/appConfig';
 import styles from './Navbar.module.css';
 import { Link } from "react-router-dom";
 

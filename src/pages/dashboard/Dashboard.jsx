@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { signOut } from "../../services/authService";
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import { signOut } from "@services/authService";
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 import styles from './Dashboard.module.css';
 import { useEffect, useState } from "react";
-import Sidebar from "../../components/Dashboard/Sidebar/Sidebar";
-import Navbar from "../../components/Dashboard/Navbar/Navbar";
-import StatisticsOverview from "../../components/Dashboard/StatisticsOverview/StatisticsOverview";
-import Charts from "../../components/Dashboard/Charts/Charts";
-import RecentOrders from "../../components/Dashboard/RecentOrders/RecentOrders";
+import Sidebar from "@components/Dashboard/Sidebar/Sidebar";
+import Navbar from "@components/Dashboard/Navbar/Navbar";
+import StatisticsOverview from "@components/Dashboard/StatisticsOverview/StatisticsOverview";
+import Charts from "@components/Dashboard/Charts/Charts";
+import RecentOrders from "@components/Dashboard/RecentOrders/RecentOrders";
 
 export default function Dashboard() {
     useDocumentTitle("Dashboard");

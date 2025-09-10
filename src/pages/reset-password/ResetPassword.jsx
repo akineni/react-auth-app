@@ -2,11 +2,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './ResetPassword.module.css';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { changePassword } from '../../services/authService';
-import { resetPasswordSchema } from '../../schemas/reset-password.schema';
+import { changePassword } from '@services/authService';
+import { resetPasswordSchema } from '@schemas/reset-password.schema';
 import { toast } from 'react-toastify';
-import { useAuth } from '../../context/AuthProvider';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import { useAuth } from '@context/AuthProvider';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function ResetPassword() {
     useDocumentTitle ("Reset Password");

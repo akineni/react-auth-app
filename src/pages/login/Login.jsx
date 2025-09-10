@@ -1,14 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
-// import { ReactComponent as GoogleIcon } from '../../assets/7123025_logo_google_g_icon.svg';
 import styles from './Login.module.css';
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
-import { loginSchema } from '../../schemas/login.schema';
+import { loginSchema } from '@schemas/login.schema';
 import { toast } from 'react-toastify';
-import Footer from '../../components/Footer/Footer';
-import { signInWithEmail, signInWithOAuth } from '../../services/authService';
-import { APP_NAME } from '../../config/appConfig';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import Footer from '@components/Footer/Footer';
+import { signInWithEmail, signInWithOAuth } from '@services/authService';
+import { APP_NAME } from '@config/appConfig';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function Login() {
     useDocumentTitle ("Login");

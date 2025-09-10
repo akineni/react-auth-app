@@ -1,13 +1,13 @@
 import styles from './Home.module.css';
 import { useState } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import HeroSection from '../../components/HeroSection/HeroSection';
-import FeaturedProducts from '../../components/FeaturedProducts';
-import Categories from '../../components/Categories/Categories';
-import Testimonials from '../../components/Testimonials/Testimonials';
-import SubscribeForm from '../../components/SubscribeForm/SubscribeForm';
-import Footer from '../../components/Footer/Footer';
-import { useDocumentTitle } from '../../hooks/useDocumentTitle';
+import Navbar from '@components/Navbar/Navbar';
+import HeroSection from '@components/HeroSection/HeroSection';
+import FeaturedProducts from '@components/FeaturedProducts';
+import Categories from '@components/Categories/Categories';
+import Testimonials from '@components/Testimonials/Testimonials';
+import SubscribeForm from '@components/SubscribeForm/SubscribeForm';
+import Footer from '@components/Footer/Footer';
+import { useDocumentTitle } from '@hooks/useDocumentTitle';
 
 export default function Home() {
     useDocumentTitle ("Home");

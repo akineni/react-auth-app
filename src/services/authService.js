@@ -1,5 +1,5 @@
-import { APP_URL } from "../config/appConfig";
-import { supabase } from "../lib/supabaseClient";
+import { APP_URL } from "@config/appConfig";
+import { supabase } from "@lib/supabaseClient";
 
 export async function signInWithEmail({ email, password }) {
     const { data, error } = await supabase.auth.signInWithPassword({
