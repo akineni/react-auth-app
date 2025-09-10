@@ -1,0 +1,86 @@
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #343a40;
+    color: #fff;
+    padding-top: 20px;
+    transition: all 0.3s;
+    z-index: 1050;
+}
+
+.sidebar:global(.collapsed) {
+    margin-left: -250px;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    /* transition: background 0.3s; */
+}
+
+.sidebar a:hover,
+.sidebar a:global(.active) {
+    background: #495057;
+    color: #fff;
+}
+
+/* Mobile overlay and close button */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 15px 20px; 
+    margin-bottom: 15px;
+}
+
+.sidebar-close {
+    display: none;
+    background: none;
+    border: none;
+    color: #adb5bd;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.sidebar-close:hover {
+    color: #fff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+        box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar:global(.show) {
+        margin-left: 0;
+    }
+
+    .sidebar:global(.show) ~ .sidebar-overlay {
+        display: block;
+    }
+
+    .sidebar:global(.show) .sidebar-close {
+        display: block;
+    }
+}
