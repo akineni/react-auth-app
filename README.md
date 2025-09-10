@@ -42,7 +42,7 @@ src/
 
 ### 1. Clone Repo
 ```bash
-git clone https://github.com/your-username/react-auth-app.git
+git clone https://github.com/akineni/react-auth-app.git
 cd react-auth-app
 ```
 
