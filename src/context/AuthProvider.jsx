@@ -8,30 +8,36 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const [isRecovery, setIsRecovery] = useState(false);
 
-    alert("Eniola")
-
     useEffect(() => {
-        alert("AuthProvider mounted")
+        try{
+            alert('useEffect runs')
         // This method retrieves the current local session (i.e local storage).
-        supabase.auth.getSession().then(async ({ data: { session }, error }) => {
-            if (error) {
-                alert("Error in getSession: " + JSON.stringify(error))
-            }
-            if (session) {
-                alert("Initial session found: " + JSON.stringify(session.user))
-            } else {
-                alert("No session found")
-            }
-            if (session){
-                // https://www.reddit.com/r/Supabase/comments/yhf2bt/user_gets_logged_in_automatically_when_resetting/
-                // const { data, error } = await supabase.auth.getClaims();
-                // const authMethod = data.claims?.amr?.[0]?.method;
-                // console.log(authMethod);
-            }
-            
-            setSession(session);
-            setLoading(false);
-        });
+            supabase.auth.getSession().then(async ({ data: { session }, error }) => {
+                if (error) {
+                    alert("Error in getSession: " + JSON.stringify(error))
+                }
+                if (session) {
+                    alert("Initial session found: " + JSON.stringify(session.user))
+                } else {
+                    alert("No session found")
+                }
+                if (session){
+                    // https://www.reddit.com/r/Supabase/comments/yhf2bt/user_gets_logged_in_automatically_when_resetting/
+                    // const { data, error } = await supabase.auth.getClaims();
+                    // const authMethod = data.claims?.amr?.[0]?.method;
+                    // console.log(authMethod);
+                }
+                
+                setSession(session);
+                setLoading(false);
+            });
+        } catch (err) {
+            alert("Crash in getSession: " + err.message)
+        } finally {
+            // Fallback to make sure loading is never stuck
+            setLoading(false)
+            alert("Loading set to false")
+        }
 
         // Listen for auth state changes
         const { data: { subscription } } = supabase.auth.onAuthStateChange(
