@@ -13,13 +13,12 @@ export async function signInWithEmail({ email, password }) {
 
 export async function signInWithOAuth() {
     const redirectTo = `${APP_URL}/dashboard`;
-    console.log(redirectTo);
-    // const { data, error } = await supabase.auth.signInWithOAuth({
-    //     provider: 'google',
-    //     options: {
-    //         redirectTo
-    //     }
-    // });
+    const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+            redirectTo
+        }
+    });
 
     if (error) throw error;
     return data;
@@ -43,7 +42,6 @@ export async function signUpNewUser({ email, password, fullName }) {
 
 export async function resetPassword(email) {
     const redirectTo = `${APP_URL}/reset-password`;
-    console.log(redirectTo);
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo,
     });
