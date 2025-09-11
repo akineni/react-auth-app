@@ -10,7 +10,15 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         // This method retrieves the current local session (i.e local storage).
-        supabase.auth.getSession().then(async ({ data: { session } }) => {
+        supabase.auth.getSession().then(async ({ data: { session }, error }) => {
+            if (error) {
+                alert("Error in getSession: " + JSON.stringify(error))
+            }
+            if (session) {
+                alert("Initial session found: " + JSON.stringify(session.user))
+            } else {
+                alert("No session found")
+            }
             if (session){
                 // https://www.reddit.com/r/Supabase/comments/yhf2bt/user_gets_logged_in_automatically_when_resetting/
                 // const { data, error } = await supabase.auth.getClaims();
