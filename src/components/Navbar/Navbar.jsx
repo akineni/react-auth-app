@@ -10,8 +10,8 @@ export default function Navbar() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <form className="d-flex mx-auto w-50">
+                <div className="collapse navbar-collapse mt-4 mt-md-0" id="navbarNav">
+                    <form className={`${styles['search-form']} d-flex mx-auto`}>
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>

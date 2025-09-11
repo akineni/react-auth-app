@@ -8,7 +8,7 @@ export default function Testimonials({ testimonials }) {
                 <div className="row">
                     {
                         testimonials.map((testimonial, index) => (
-                            <div className="col-md-4" key={ index }>
+                            <div className="col-md-4 mb-4 mb-md-0" key={ index }>
                                 <div className={styles['testimonial-card'] }>
                                     <p>{ testimonial.message }</p>
                                     <p className="font-weight-bold">- { testimonial.author }</p>
