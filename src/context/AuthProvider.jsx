@@ -11,7 +11,9 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         try{
             alert('useEffect runs')
-        // This method retrieves the current local session (i.e local storage).
+            alert("Supabase URL: " + import.meta.env.VITE_SUPABASE_URL)
+            alert("Supabase Key exists: " + (import.meta.env.VITE_SUPABASE_ANON_KEY ? "yes" : "no"))
+            // This method retrieves the current local session (i.e local storage).
             supabase.auth.getSession().then(async ({ data: { session }, error }) => {
                 if (error) {
                     alert("Error in getSession: " + JSON.stringify(error))
