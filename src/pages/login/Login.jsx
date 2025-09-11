@@ -8,12 +8,18 @@ import Footer from '@components/Footer/Footer';
 import { signInWithEmail, signInWithOAuth } from '@services/authService';
 import { APP_NAME } from '@config/appConfig';
 import { useDocumentTitle } from '@hooks/useDocumentTitle';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Login() {
 	useDocumentTitle("Login");
 
 	const [showPassword, setShowPassword] = useState(false);
+	const [lsTest, setLsTest] = useState(null)
+
+	useEffect(() => {
+		localStorage.setItem("test", "123")
+		setLsTest(localStorage.getItem("test"))
+	}, [])
 
 	const {
 		register,
@@ -42,6 +48,7 @@ export default function Login() {
 		<>
 			<section className={styles['login-section']} autoComplete="off">
 				<div className="container">
+					<div>LocalStorage test: {lsTest}</div>
 					<h1 className="mb-4">Welcome Back to {APP_NAME}</h1>
 					<div className={styles['login-form-container']}>
 
