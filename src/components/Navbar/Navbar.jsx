@@ -18,8 +18,8 @@ export default function Navbar() {
 
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item" title="Cart"><a className="nav-link" href="#"><i className="fa-solid fa-cart-shopping fa-xl"></i></a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Products</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Categories</a></li>
+                        {/* <li className="nav-item"><a className="nav-link" href="#">Products</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#">Categories</a></li> */}
                         {/* <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
                         <li className="nav-item"><a className="nav-link" href="#">Contact</a></li> */}
                         
