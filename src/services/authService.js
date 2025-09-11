@@ -14,12 +14,12 @@ export async function signInWithEmail({ email, password }) {
 export async function signInWithOAuth() {
     const redirectTo = `${APP_URL}/dashboard`;
     console.log(redirectTo);
-    const { data, error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-        options: {
-            redirectTo
-        }
-    });
+    // const { data, error } = await supabase.auth.signInWithOAuth({
+    //     provider: 'google',
+    //     options: {
+    //         redirectTo
+    //     }
+    // });
 
     if (error) throw error;
     return data;
