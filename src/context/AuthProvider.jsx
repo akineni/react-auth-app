@@ -8,7 +8,10 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const [isRecovery, setIsRecovery] = useState(false);
 
+    alert("Eniola")
+
     useEffect(() => {
+        alert("AuthProvider mounted")
         // This method retrieves the current local session (i.e local storage).
         supabase.auth.getSession().then(async ({ data: { session }, error }) => {
             if (error) {
