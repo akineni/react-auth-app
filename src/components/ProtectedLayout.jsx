@@ -2,9 +2,9 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "@context/AuthProvider";
 
 export default function ProtectedLayout() {
-    const { session } = useAuth();
+    const { session, user } = useAuth();
 
-    if (!session) {
+    if (!user) {
         return <Navigate to="/login" replace />;
     }
 
