@@ -2,9 +2,9 @@ import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "@context/AuthProvider";
 
 export default function PublicLayout() {
-    const { session, user, isRecovery } = useAuth();
+    const { session, isRecovery } = useAuth();
 
-    if (user && !isRecovery) {
+    if (session && !isRecovery) {
         return <Navigate to="/dashboard" replace />;
     }
 
