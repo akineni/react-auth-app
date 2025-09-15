@@ -10,6 +10,7 @@ import NotFound from '@pages/404/404'
 import Dashboard from '@pages/dashboard/Dashboard'
 import PublicLayout from '@components/PublicLayout'
 import ProtectedLayout from '@components/ProtectedLayout'
+import AuthCallback from '@pages/AuthCallback'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/auth/callback" element={<AuthCallback />} />
         </Route>
 
         {/* Protected routes */}

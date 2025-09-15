@@ -11,9 +11,9 @@ const supabaseAnonKey = SUPABASE_ANON_KEY;
 // or store it elsewhere.
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	auth: {
-		persistSession: true,   // save recovery sessions in localStorage
-		autoRefreshToken: true,
-		detectSessionInUrl: true,
+		// persistSession: true,   // save recovery sessions in localStorage
+		// autoRefreshToken: true,
+		// detectSessionInUrl: true,
 		flowType: "pkce",
 	}
 });
