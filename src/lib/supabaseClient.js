@@ -9,10 +9,11 @@ const supabaseAnonKey = SUPABASE_ANON_KEY;
 // This ensures the user remains logged in across page reloads.
 // Set to false if you want to manage session persistence manually
 // or store it elsewhere.
-export const supabase = createClient(supabaseUrl, supabaseAnonKey/*, {
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	auth: {
 		persistSession: true,   // save recovery sessions in localStorage
 		autoRefreshToken: true,
-		detectSessionInUrl: true
+		detectSessionInUrl: true,
+		flowType: "pkce",
 	}
-}*/);
+});
