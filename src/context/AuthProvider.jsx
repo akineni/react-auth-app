@@ -9,6 +9,10 @@ export function AuthProvider({ children }) {
     const [isRecovery, setIsRecovery] = useState(false);
 
     useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (code) setIsRecovery(true);
+
         // This method retrieves the current local session (i.e local storage).
         supabase.auth.getSession().then(async ({ data: { session } }) => {
             if (session){
@@ -27,9 +31,10 @@ export function AuthProvider({ children }) {
             (event, session) => {
                 setSession(session);
 
-                if (event === "PASSWORD_RECOVERY") {
-                    setIsRecovery(true);
-                }
+                // For implicit grant flow (e.g. magic link, OAuth), the user is redirected back to the site with a new URL containing the access token in the hash fragment
+                // if (event === "PASSWORD_RECOVERY") {
+                //     setIsRecovery(true);
+                // }
             }
         );
 
