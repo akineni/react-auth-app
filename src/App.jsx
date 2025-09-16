@@ -16,9 +16,10 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Home />} />
+        
         {/* Public routes */}
         <Route element={<PublicLayout />}>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
