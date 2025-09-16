@@ -1,8 +1,10 @@
 import { useAuth } from '@context/AuthProvider';
 import styles from './Navbar.module.css';
+import { useDarkMode } from '@context/DarkModeProvider';
 
 export default function Navbar({ handleToggle }) {
     const { session } = useAuth();
+    const { darkMode } = useDarkMode();
     const avatarUrl = session?.user?.user_metadata?.avatar_url;
     const fallbackAvatar = "https://www.gravatar.com/avatar/?d=mp"; // https://i.pravatar.cc/40
     const safeAvatarUrl = avatarUrl && avatarUrl.trim() !== "" ? avatarUrl : fallbackAvatar;
@@ -10,7 +12,7 @@ export default function Navbar({ handleToggle }) {
     return (
         <>
             {/* Top Navbar */}
-            <div className={styles['top-navbar']}>
+            <div className={`${styles['top-navbar']} ${darkMode ? "bg-dark text-white" : ""}`}>
                 <button
                     className={styles['toggle-btn']}
                     id="toggleBtn"

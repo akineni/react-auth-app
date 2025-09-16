@@ -8,9 +8,11 @@ import Navbar from "@components/Dashboard/Navbar/Navbar";
 import StatisticsOverview from "@components/Dashboard/StatisticsOverview/StatisticsOverview";
 import Charts from "@components/Dashboard/Charts/Charts";
 import RecentOrders from "@components/Dashboard/RecentOrders/RecentOrders";
+import { useDarkMode } from "@context/DarkModeProvider";
 
 export default function Dashboard() {
     useDocumentTitle("Dashboard");
+    const {darkMode} = useDarkMode();
 
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
     const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -44,7 +46,7 @@ export default function Dashboard() {
             />
 
             {/* Main Content */}
-            <div className={`${styles['main-content']} ${isSidebarCollapsed ? "expanded" : ""}`} id="main-content">
+            <div className={`${styles['main-content']} ${isSidebarCollapsed ? "expanded" : ""} section-neutral`} id="main-content">
 
                 <Navbar handleToggle={handleToggle} />
 
