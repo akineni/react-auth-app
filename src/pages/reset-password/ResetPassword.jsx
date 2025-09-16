@@ -79,7 +79,7 @@ export default function ResetPassword() {
 								<i
 									className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"
 										} position-absolute top-50 end-0 translate-middle-y me-3`}
-									style={{ color: "#343a40", cursor: "pointer" }}
+									style={{ color: "var(--color-secondary-dark)", cursor: "pointer" }}
 									onClick={() => setShowPassword(!showPassword)}
 								></i>
 							</div>
@@ -101,7 +101,7 @@ export default function ResetPassword() {
 								<i
 									className={`fa-solid ${showConfirmPassword ? "fa-eye-slash" : "fa-eye"
 										} position-absolute top-50 end-0 translate-middle-y me-3`}
-									style={{ color: "#343a40", cursor: "pointer" }}
+									style={{ color: "var(--color-secondary-dark)", cursor: "pointer" }}
 									onClick={() => setShowConfirmPassword(!showConfirmPassword)}
 								></i>
 							</div>

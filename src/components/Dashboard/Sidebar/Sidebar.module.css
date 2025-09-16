@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: #343a40;
+    background: var(--color-secondary-dark);
     color: #fff;
     padding-top: 20px;
     transition: all 0.3s;

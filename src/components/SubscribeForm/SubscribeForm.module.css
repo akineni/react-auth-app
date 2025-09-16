@@ -11,7 +11,7 @@
 }
 
 .subscribe-btn {
-    background-color: #ff7f50;
+    background-color: var(--color-primary);
     color: white;
     padding: 12px 30px;
     border-radius: 25px;
@@ -20,7 +20,7 @@
 }
 
 .subscribe-btn:hover {
-    background-color: #ff6347;
+    background-color: var(--color-primary-dark);
 }
 
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 .signup-section {
-    background: linear-gradient(to right, #6c757d, #343a40);
+    background: linear-gradient(to right, #6c757d, var(--color-secondary-dark));
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -30,7 +30,7 @@
 
 .signup-form-container button {
     width: 100%;
-    background-color: #ff7f50;
+    background-color: var(--color-primary);
     color: white;
     padding: 15px;
     border-radius: 25px;
@@ -39,7 +39,7 @@
 }
 
 .signup-form-container button:hover {
-    background-color: #ff6347;
+    background-color: var(--color-primary-dark);
 }
 
 .btn-google {
@@ -68,17 +68,17 @@
 .signup-footer {
     text-align: center;
     margin-top: 20px;
-    color: #343a40;
+    color: var(--color-secondary-dark);
 }
 
 .signup-footer a {
-    color: #ff7f50;
+    color: var(--color-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .signup-footer a:hover {
-    color: #ff6347;
+    color: var(--color-primary-dark);
 }
 
 /* Separator Style */
@@ -103,7 +103,7 @@
 
 /* Footer Styles */
 .footer {
-    background-color: #343a40;
+    background-color: var(--color-secondary-dark);
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -115,14 +115,14 @@
 }
 
 .social-icons a {
-    color: #ff7f50;
+    color: var(--color-primary);
     margin: 0 10px;
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #ff6347;
+    color: var(--color-primary-dark);
 }
 
 /* Responsiveness */

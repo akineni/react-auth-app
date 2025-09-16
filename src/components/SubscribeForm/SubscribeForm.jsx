@@ -1,8 +1,11 @@
+import { useDarkMode } from '@context/DarkModeProvider';
 import styles from './SubscribeForm.module.css';
 
 export default function SubscribeForm() {
+	const { darkMode } = useDarkMode();
+
 	return (
-		<section className={`${styles['subscribe-form']} bg-light`}>
+		<section className={`${styles['subscribe-form']} ${darkMode ? "bg-dark text-white-50" : "bg-light text-dark"}`}>
 			<div className="container">
 				<h3 className="mb-4">Stay Updated with Our Latest Offers</h3>
 				<div className="container">
@@ -29,9 +32,6 @@ export default function SubscribeForm() {
 						</div>
 					</div>
 				</div>
-
-
-
 			</div>
 		</section>
 	);

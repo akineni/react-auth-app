@@ -1,5 +1,5 @@
 .cta-btn {
-    background: linear-gradient(to right, #ff7f50, #ff6347);
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
     color: white;
     padding: 12px 30px;
     border-radius: 50px;
@@ -8,7 +8,7 @@
 
 .cta-btn:hover {
     transform: scale(1.05);
-    background: #ff6347;
+    background: var(--color-primary-dark);
 }
 
 .carousel-item img {
@@ -19,12 +19,12 @@
 .social-icons i {
     font-size: 1.5rem;
     margin: 0 10px;
-    color: #ff7f50;
+    color: var(--color-primary);
     transition: color 0.3s ease;
 }
 
 .social-icons i:hover {
-    color: #ff6347;
+    color: var(--color-primary-dark);
 }
 
 /* Add responsiveness for smaller screens */

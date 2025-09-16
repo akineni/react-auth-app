@@ -1,5 +1,5 @@
 .hero-section {
-    background: linear-gradient(to right, #6c757d, #343a40);
+    background: linear-gradient(to right, #6c757d, var(--color-secondary-dark));
     color: white;
     padding: 100px 0;
     text-align: center;

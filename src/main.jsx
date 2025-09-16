@@ -11,13 +11,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from '@context/AuthProvider';
 import ScrollToTop from '@components/ScrollToTop.jsx';
 import Loader from '@components/Loader/Loader.jsx';
+import { DarkModeProvider } from '@context/DarkModeProvider';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ScrollToTop />
       <AuthProvider>
-        <App />
+        <DarkModeProvider>
+          <App />
+        </DarkModeProvider>
         <Loader />
       </AuthProvider>
     </BrowserRouter>

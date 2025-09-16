@@ -1,7 +1,71 @@
-body {
-    font-family: 'Arial', sans-serif;
+:root {
+	/* Fonts */
+	--font-family-base: 'Arial', sans-serif;
+
+	/* Colors */
+	--color-text: #111;
+	--color-bg: #ffffff;
+	--color-bg-alt: #f8f9fa;
+	/* light background like sections */
+	--color-primary: #ff7f50;
+	/* coral */
+	--color-primary-dark: #ff6347;
+	/* tomato */
+	--color-secondary: #6c757d;
+	/* gray */
+	--color-secondary-dark: #343a40;
+	/* dark gray */
+	--color-border: #e0e0e0;
+	--color-section-neutral: transparent;
+
+	/* Hero */
+	--hero-gradient: linear-gradient(to right, #6c757d, #343a40);
+
+	/* Buttons */
+	--btn-radius: 50px;
+	--btn-padding: 12px 30px;
+
+	/* Cards */
+	--card-bg: #fff;
+	--card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--card-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.2);
+	--card-radius: 15px;
+
+	/* Footer */
+	--footer-bg: #343a40;
+	--footer-text: #ffffff;
+
+	/* Social icons */
+	--social-icon-color: #ff7f50;
+	--social-icon-hover: #ff6347;
 }
 
-.bg-orange { background-color: #ff7f50; }
+/* Dark Theme */
+body.dark-mode {
+	--color-text: #f1f1f1;
+	--color-bg: #121212;
+	--color-bg-alt: #1e1e1e;
+	--color-border: #333;
+	--color-section-neutral: #383F45;
 
-.nav-link.btn:hover {background-color: #ff6347; }
+	--hero-gradient: linear-gradient(to right, #222, #111);
+
+	--card-bg: #222;
+	/* --footer-bg: #1e1e1e; */
+}
+
+.section-neutral {
+	background-color: var(--color-section-neutral);
+}
+
+body {
+	font-family: var(--font-family-base);
+}
+
+.bg-orange {
+	background-color: var(--color-primary);
+}
+
+.bg-orange.btn:hover {
+	background-color: var(--color-primary-dark);
+}
