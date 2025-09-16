@@ -8,25 +8,37 @@ export default function Navbar() {
 
     return (
         <nav className={`navbar navbar-expand-lg sticky-top ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}>
-            <div className="container">
+            <div className="container d-flex align-items-center">
                 {/* Brand */}
                 <Link className="navbar-brand" to="/">
                     {APP_NAME}
                 </Link>
 
-                {/* Mobile Toggle */}
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                {/* Mobile: Dark Mode Toggle + Hamburger */}
+                <div className="d-flex align-items-center d-lg-none ms-auto">
+                    {/* Dark Mode Toggle */}
+                    <button
+                        className="btn btn-link me-1"
+                        onClick={() => setDarkMode(!darkMode)}
+                        title="Toggle Dark Mode"
+                        style={{ color: darkMode ? "#fff" : "#000", fontSize: "1.3rem" }}
+                    >
+                        <i className={`fa-solid ${darkMode ? "fa-sun" : "fa-moon"}`}></i>
+                    </button>
 
-                {/* Nav Links */}
-                <div className="collapse navbar-collapse mt-4 mt-md-0" id="navbarNav">
-                    
+                    {/* Hamburger */}
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                {/* Desktop & Mobile Collapse */}
+                <div className="collapse navbar-collapse mt-3 mt-lg-0" id="navbarNav">
                     {/* Search Form */}
                     <form className={`${styles['search-form']} d-flex mx-auto`}>
                         <input
@@ -40,7 +52,7 @@ export default function Navbar() {
                         </button>
                     </form>
 
-                    {/* Right Side Nav */}
+                    {/* Nav Links */}
                     <ul className="navbar-nav ms-auto align-items-center">
                         {/* Cart */}
                         <li className="nav-item" title="Cart">
@@ -56,29 +68,22 @@ export default function Navbar() {
 
                         {/* Auth Links */}
                         <li className="nav-item">
-                            <Link className="nav-link" to="/login">
-                                Login
-                            </Link>
+                            <Link className="nav-link" to="/login">Login</Link>
                         </li>
                         <li className="nav-item">
-                            <Link type="button" className="btn bg-orange text-white" to="/signup">
-                                Sign Up
-                            </Link>
+                            <Link type="button" className="btn bg-orange text-white" to="/signup">Sign Up</Link>
                         </li>
 
-                        {/* Dark Mode Toggle */}
-                        <li className="nav-item">
-                            <a
-                                className="nav-link"
-                                id="darkModeToggle"
-                                title="Toggle Dark Mode"
+                        {/* Desktop Dark Mode Toggle */}
+                        <li className="nav-item d-none d-lg-block">
+                            <button
+                                className="btn btn-link"
                                 onClick={() => setDarkMode(!darkMode)}
+                                title="Toggle Dark Mode"
+                                style={{ color: darkMode ? "#fff" : "#000", fontSize: "1.3rem" }}
                             >
-                                <i
-                                    className={`fa-solid ${darkMode ? "fa-sun" : "fa-moon"}`}
-                                    style={{ cursor: "pointer", fontSize: "larger" }}
-                                ></i>
-                            </a>
+                                <i className={`fa-solid ${darkMode ? "fa-sun" : "fa-moon"}`}></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
