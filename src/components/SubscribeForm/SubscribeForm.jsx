@@ -24,7 +24,7 @@ export default function SubscribeForm() {
 								/>
 								<button
 									type="submit"
-									className={`form-control ${styles['subscribe-btn']} w-100 w-md-auto`}
+									className={`form-control ${styles['subscribe-btn']} btn w-100 w-md-auto`}
 								>
 									Subscribe
 								</button>
