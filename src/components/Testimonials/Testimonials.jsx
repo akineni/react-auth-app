@@ -13,10 +13,17 @@ export default function Testimonials({ testimonials }) {
 					{testimonials.map((testimonial, index) => (
 						<div className="col-md-4 mb-4 mb-md-0" key={index}>
 							<div
-								className={`${styles['testimonial-card']} text-center ${darkMode ? "bg-dark text-light" : "bg-white text-dark"
+								className={`${styles['testimonial-card']} text-center ${
+									darkMode ? "bg-dark text-light" : "bg-white text-dark"
 									}`}
 							>
-								<img src="https://placehold.co/80x80" alt={testimonial.author} class="rounded-circle mb-3 mx-auto d-block"></img>
+								<img
+									src={testimonial.image}
+									alt={testimonial.author}
+									className="rounded-circle mb-3 mx-auto d-block"
+									width={80}
+  									height={80}
+								/>
 								<p>{testimonial.message}</p>
 								<p className="fw-bold mb-0">- {testimonial.author}</p>
 							</div>
@@ -25,6 +32,5 @@ export default function Testimonials({ testimonials }) {
 				</div>
 			</div>
 		</section>
-
 	);
 }
