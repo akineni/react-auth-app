@@ -1,13 +1,16 @@
+import { useDarkMode } from '@context/DarkModeProvider';
 import styles from './RecentOrders.module.css';
 
 export default function RecentOrders() {
+    const {darkMode} = useDarkMode();
+
     return (
         <>
             {/* Recent Orders */}
-            <div className={`${styles['recent-orders']} mt-4`}>
+            <div className={`${styles['recent-orders']} mt-4 ${darkMode ? "bg-dark text-white" : ""}`}>
                 <h5>Recent Orders</h5>
                 <div className="table-responsive">
-                    <table className="table align-middle mt-3">
+                    <table className={`table align-middle mt-3 ${darkMode ? "table-dark" : ""}`}>
                         <thead>
                             <tr>
                                 <th>#</th>

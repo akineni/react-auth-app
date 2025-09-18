@@ -18,6 +18,8 @@
 	--color-border: #e0e0e0;
 	--color-section-neutral: transparent;
 
+	--color-dashboard-navbar-border-bottom: #ddd;
+
 	/* Hero */
 	--hero-gradient: linear-gradient(to right, #6c757d, #343a40);
 
@@ -52,6 +54,7 @@ body.dark-mode {
 
 	--card-bg: #222;
 	/* --footer-bg: #1e1e1e; */
+	--color-dashboard-navbar-border-bottom: #0e1011;
 }
 
 .section-neutral {
