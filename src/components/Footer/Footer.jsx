@@ -19,7 +19,7 @@ export default function Footer({ className }) {
 					</a>
 
 					<a
-						href="https://www.linkedin.com/in/eniola-akinlonu-b210b3164"
+						href="https://www.linkedin.com/posts/eniola-akinlonu-b210b3164_reactjs-vite-supabase-activity-7374417700510535681-OOoG?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcrVYkBtAQV51injSOLg3slXRXysxpKfvo"
 						title="View linkedin post"
 						target="_blank"
 					>
