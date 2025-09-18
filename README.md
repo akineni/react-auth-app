@@ -1,7 +1,7 @@
 # 🔐 React + Vite + Supabase Auth Starter
 
-A production-ready authentication starter kit built with **React (Vite)** and **Supabase**.  
-It includes **email/password authentication**, **OAuth (Google, GitHub, etc.)**, **password reset flows**, and **protected routes** out of the box.  
+A production-ready authentication starter kit built with **React (Vite)** and **Supabase**.
+It includes **email/password authentication**, **OAuth (Google, GitHub, etc.)**, **password reset flows**, and **protected routes** out of the box.
 
 This project is designed with **scalability**, **developer experience**, and **security** in mind — so you can focus on building features instead of boilerplate.
 
@@ -9,15 +9,16 @@ This project is designed with **scalability**, **developer experience**, and **s
 
 ## ✨ Features
 
-- ⚡️ **React + Vite** — Fast dev server & optimized builds.
-- 🔑 **Supabase Auth** — Email/password, OAuth providers, and password recovery.
-- 🔄 **Session Persistence** — Auto-refresh tokens & secure session management.
-- 🔐 **Protected & Public Routes** — Role-based navigation with layouts.
-- 📬 **Forgot/Reset Password** — Full password recovery flow.
-- 🌐 **OAuth Support** — Sign in with Google, GitHub, etc.
-- 🎨 **Toast Notifications** — Real-time feedback for all auth actions.
-- ♻️ **SOLID-Friendly Context API** — Clean separation of concerns for authentication state.
-- 🚀 **Ready to Deploy** — Works with Netlify, Vercel, or your hosting of choice.
+* ⚡️ **React + Vite** — Fast dev server & optimized builds.
+* 🔑 **Supabase Auth** — Email/password, OAuth providers, and password recovery.
+* 🔄 **Session Persistence** — Auto-refresh tokens & secure session management.
+* 🔐 **Protected & Public Routes** — Role-based navigation with layouts.
+* 📬 **Forgot/Reset Password** — Full password recovery flow.
+* 🌐 **OAuth Support** — Sign in with Google, GitHub, etc.
+* 🎨 **Toast Notifications** — Real-time feedback for all auth actions.
+* 🌓 **Dark Theme Toggle** — Switch between light and dark UI.
+* ♻️ **SOLID-Friendly Context API** — Clean separation of concerns for authentication state.
+* 🚀 **Ready to Deploy** — Works with Netlify, Vercel, or your hosting of choice.
 
 ---
 
@@ -41,18 +42,21 @@ src/
 ## ⚙️ Setup & Installation
 
 ### 1. Clone Repo
+
 ```bash
 git clone https://github.com/akineni/react-auth-app.git
 cd react-auth-app
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Configure Supabase
-Create a **Supabase project** at [supabase.com](https://supabase.com).  
+
+Create a **Supabase project** at [supabase.com](https://supabase.com).
 Copy your **API URL** and **Anon Key**, then create a `.env` file in the project root:
 
 ```env
@@ -61,6 +65,7 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 ```
 
 ### 4. Run Development Server
+
 ```bash
 npm run dev
 ```
@@ -83,26 +88,48 @@ App will be available at [http://localhost:5173](http://localhost:5173)
 
 ## 🚀 Deployment
 
-This app works great with [Vercel](https://vercel.com), [Netlify](https://netlify.com), or any static hosting.  
+This app works great with [Vercel](https://vercel.com), [Netlify](https://netlify.com), or any static hosting.
 Just make sure to set your environment variables (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) in your hosting provider.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [Supabase](https://supabase.com/) (Auth + DB)
-- [React Router](https://reactrouter.com/) (Routing & layouts)
-- [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) (Form validation)
-- [React Toastify](https://fkhadra.github.io/react-toastify/) (Notifications)
+* [React](https://react.dev/)
+* [Vite](https://vitejs.dev/)
+* [Supabase](https://supabase.com/) (Auth + DB)
+* [React Router](https://reactrouter.com/) (Routing & layouts)
+* [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) (Form validation)
+* [React Toastify](https://fkhadra.github.io/react-toastify/) (Notifications)
+
+---
+
+## 🌈 React Concepts Covered
+
+This project demonstrates and teaches the following React concepts:
+
+* **React Components** — Functional and reusable components.
+* **Props** — Passing data between components.
+* **React CSS Modules** — Scoped, maintainable styles.
+* **React Router** — Nested routes, layouts, protected and public routes.
+* **Custom Hooks** — Encapsulating reusable logic (e.g., `useAuth`, `useDocumentTitle`).
+* **useEffect** — Side effects, subscriptions, and cleanup.
+* **Context API** — Global state management (`AuthProvider`).
+* **useRef** — DOM references for elements (e.g., sidebar toggles).
+* **Path Aliases** — Cleaner imports with `@` prefixes.
+* **React Hook Form + Zod Validation** — Form handling and schema validation.
+* **State Management** — useState for UI state (sidebar, forms, dark mode).
+* **Conditional Rendering** — Show/hide UI based on auth state or theme.
+* **Event Handling** — Clicks, form submissions, and interactive UI.
+* **Lazy Loading & Dynamic Imports** — Optimize load times for dashboards or heavy components.
+* **Dark Theme Toggle** — Managing theme state and CSS variables.
 
 ---
 
 ## 🌟 Why This Starter?
 
-Most Supabase + React examples cover only the basics.  
-This starter **boasts advanced real-world flows** like password recovery, OAuth, session persistence, and clean SOLID-inspired architecture — so you don’t need to reinvent the wheel.
+Most Supabase + React examples cover only the basics.
+This starter **boasts advanced real-world flows** like password recovery, OAuth, session persistence, dark theme toggle, and clean SOLID-inspired architecture — so you don’t need to reinvent the wheel.
 
 ---
 
