@@ -114,7 +114,7 @@ This project demonstrates and teaches the following React concepts:
 * **React Router** — Nested routes, layouts, protected and public routes.
 * **Custom Hooks** — Encapsulating reusable logic (e.g., `useAuth`, `useDocumentTitle`).
 * **useEffect** — Side effects, subscriptions, and cleanup.
-* **Context API** — Global state management (`AuthProvider`).
+* **Context API** — Global state management (`AuthProvider`, `DarkThemeProvider`).
 * **useRef** — DOM references for elements (e.g., sidebar toggles).
 * **Path Aliases** — Cleaner imports with `@` prefixes.
 * **React Hook Form + Zod Validation** — Form handling and schema validation.
